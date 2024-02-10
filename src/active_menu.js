@@ -5,6 +5,10 @@ const sectionIds = [
   '#work',
   '#testimonial',
   '#contact',
+  '#Overview',
+  '#Data',
+  '#Code',
+  '#Results'
 ];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
