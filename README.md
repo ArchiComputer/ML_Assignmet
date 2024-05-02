@@ -1,3 +1,0 @@
-# portfolio
-
-Jay's portfolio
