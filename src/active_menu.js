@@ -33,6 +33,12 @@ const sectionIds = [
   '#Decision_Tree_code',
   '#Decision_Tree_results',
   '#Decision_Tree_conclusion'
+  '#SVM',
+  '#SVM_overview',
+  '#SVM_data',
+  '#SVM_code',
+  '#SVM_results',
+  '#SVM_conclusion'
 ];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
