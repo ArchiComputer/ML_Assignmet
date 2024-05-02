@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>ML Projects</title>
+    <meta
+      name="description"
+      content="Portfolio for world-renowned software
+    engineer Ellie"
+    />
+    <meta name="author" content="Ellie" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="엘리의 포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://dream-ellie.github.io/portfolio/"
+    />
+    <meta
+      property="og:image"
+      content="https://dream-ellie.github.io/portfolio/images/og.webp"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <!-- <div class="header__logo">
+        <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="#">CSCI 5622</a></h1>
+      </div> -->
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Introduction</a></li>
+          <li><a class="header__menu__item" href="#about">DataPrep/EDA</a></li>
+          <li><a class="header__menu__item" href="#skills">Linear Regression model</a>
+            <ul>
+              <li><a class="header__menu__item" href="#Overview">Overview</a></li>
+              <li><a class="header__menu__item" href="#Data">Data</a></li>
+              <li><a class="header__menu__item" href="#Code">Code</a></li>
+              <li><a class="header__menu__item" href="#Results">Results</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#work">Work</a></li> -->
+          <li><a class="header__menu__item" href="#clustering">Clustering</a>
+            <ul>
+              <li><a class="header__menu__item" href="#clustering_overview">Overview</a></li>
+              <li><a class="header__menu__item" href="#clustering_data">Data Prep</a></li>
+              <li><a class="header__menu__item" href="#clustering_code">Code</a></li>
+              <li><a class="header__menu__item" href="#clustering_results">Results</a></li>
+              <li><a class="header__menu__item" href="#clustering_conclusion">Conclusion</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#work">Work</a></li> -->
+          <li><a class="header__menu__item" href="#PCA">PCA</a>
+            <ul>
+              <li><a class="header__menu__item" href="#PCA_overview">Overview</a></li>
+              <li><a class="header__menu__item" href="#PCA_data">Data Prep</a></li>
+              <li><a class="header__menu__item" href="#PCA_code">Code</a></li>
+              <li><a class="header__menu__item" href="#PCA_results">Results</a></li>
+              <li><a class="header__menu__item" href="#PCA_conclusion">Conclusion</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#work">Work</a></li> -->
+          <li><a class="header__menu__item" href="#Naïve_Bayes">Naïve Bayes</a>
+            <ul>
+              <li><a class="header__menu__item" href="#Naïve_Bayes_overview">Overview</a></li>
+              <li><a class="header__menu__item" href="#Naïve_Bayes_data">Data Prep</a></li>
+              <li><a class="header__menu__item" href="#Naïve_Bayes_code">Code</a></li>
+              <li><a class="header__menu__item" href="#Naïve_Bayes_results">Results</a></li>
+              <li><a class="header__menu__item" href="#Naïve_Bayes_conclusion">Conclusion</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#work">Work</a></li> -->
+          <li><a class="header__menu__item" href="#Decision_Tree">Decision Trees</a>
+            <ul>
+              <li><a class="header__menu__item" href="#Decision_Tree_overview">Overview</a></li>
+              <li><a class="header__menu__item" href="#Decision_Tree_data">Data Prep</a></li>
+              <li><a class="header__menu__item" href="#Decision_Tree_code">Code</a></li>
+              <li><a class="header__menu__item" href="#Decision_Tree_results">Results</a></li>
+              <li><a class="header__menu__item" href="#Decision_Tree_conclusion">Conclusion</a></li>
+            </ul>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#work">Work</a></li> -->
+          <li>
+            <a class="header__menu__item" href="#testimonial">Conclusion</a>
+          </li>
+          <!-- <li><a class="header__menu__item" href="#contact">Contact</a></li> -->
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Introduction -->
+      <section id="home">
+        <div class="center">
+          <img src="images/introduction/Seoulbike2.png" alt="Your Image"><br>
+        </div>
+        <div class="section max-container left-align">
+          <h2 class="title">Introduction</h2>
+          <p class="home__description">
+            The most recent United Nations report, dated 2018, indicates that more than half of the global populace resided in urban
+            areas, a number projected to climb to 68% by 2050. As urbanization accelerates, cities face new challenges necessitating
+            innovative solutions in housing, infrastructure, services, and transportation. Meeting evolving mobility demands
+            requires affordable, environmentally friendly, and dependable transport methods to enable smooth movement of people and
+            goods, thus tackling issues like traffic congestion, air pollution, and lengthy commutes.         </p><br>
+          <p class="home__description">
+            Seoul Bicycle Sharing is a public bike-sharing initiative available in Seoul, South Korea, engineered to offer
+            convenient and eco-friendly transportation options for residents and visitors alike. The performance of Seoul Bicycle
+            Sharing has been consistently improving year by year. The average daily use surged to 87,817, marking a six-fold
+            increase from 2017 (13,783 cases). The rental cases from January to May 2022 totaled 14.14 million, indicating a 38.3%
+            increase compared to the same period last year.
+          </p><br>
+          <p class="home__description">
+            This study centers on the emerging phenomenon of shared bicycles as a means to boost daily bicycle traffic. Shared
+            bicycles allow users to access bicycles provided by local governments or platform companies via smart devices whenever
+            needed, even if they don't typically own a bicycle. This system helps overcome some of the challenges posed by
+            geographical constraints of traditional bicycles, as they can be easily returned when traveling long distances or facing
+            slopes, and can seamlessly integrate with other modes of transportation such as subways and buses. Shared bicycles are
+            expected to see increased use in daily commuting and other travel needs, especially among the younger generation
+            accustomed to new shared culture and technology, expanding beyond the traditional leisure-oriented use of bicycles.
+          </p><br>
+          <p class="home__description">
+            The primary dataset used in this study is derived from the usage status of public bicycles (Ttareungi) provided by the
+            Seoul Open Data Square. This dataset includes information on rental station locations, as well as monthly, daily, and
+            hourly usage statistics. Variables such as rental date, rental time, rental station name, user age group, and duration
+            of usage are incorporated for analysis. This dataset is particularly valuable as it provides spatial origin information,
+            enabling examination of demographic characteristics within different regions. Additionally, the dataset integrates
+            moving distance and usage duration under similar conditions, although it is important to note that individual data
+            points must be averaged to derive meaningful insights regarding moving distance and usage duration.          </p><br>
+          <div class="center">
+            <img src="images/introduction/dockingStation_map.png" alt="Your Image"><br>
+            <figcaption>Seoul (Seoul Bike) - Map of All Bike Stations</figcaption>
+          </div>
+          <h2 class="title">Topic explanation</h2>
+          <p class="home__description">   
+            Despite its growing popularity, concerns over the mounting deficit have surfaced. The deficit, which stood at 9 billion
+            won in 2019, increased to 9.9 billion won in 2020 and 10.3 billion won last year. The annual deficit of Seoul Bicycle
+            Sharing has been steadily rising since 2016, reaching 2.5 billion won. Behind the project's acclaim, such as the Seoul
+            Metropolitan Government's announcement to inject 3,000 more bicycles this year, the chronic deficit remains unresolved.
+          </p><br>
+          <p class="home__description">
+            Machine learning technology can play a pivotal role in optimizing operations, enhancing user experience, and ensuring
+            the long-term sustainability of Seoul Bicycle Sharing and similar bike-sharing programs. Firstly, by analyzing
+            historical usage data, machine learning algorithms can forecast bicycle demand at different times and locations across
+            the city, facilitating optimal bike distribution to meet demand. Secondly, machine learning algorithms can adjust
+            pricing dynamically based on factors like time of day, weather conditions, and special events, encouraging usage during
+            off-peak hours and less congested areas. This strategy helps balance demand across the system. Lastly, machine learning
+            algorithms can analyze sensor data from bicycles to predict potential mechanical failures or maintenance needs
+            preemptively, minimizing downtime and enhancing overall user satisfaction.
+
+            Answers to the following 12 questions will be obtained through dataset analysis and based on the results, it will help
+            create a more economical and sustainable Seoul shared bicycle business.<br>
+          </p><br>
+          <p class="description">
+          
+          1. At what time of the year do people use Seoul Bicycle Sharing the least?<br>
+          2. What day of the week do people use Seoul Bicycle Sharing the least?<br>
+          3. At what time of day do people use Seoul Bicycle Sharing the most?<br>
+          4. What is the difference in hourly usage between weekdays and weekends?<br>
+          5. Who are the main customers of which shared bike?<br>
+          6. What weather factors influence people to use Seoul Bicycle Sharing?<br>
+          7. Which seasons influence people to use Seoul Bicycle Sharing?<br>
+          8. How much air pollution and fine dust index affect people's use of Seoul Bicycle Sharing?<br>
+          9. The relationship between the use of bicycles according to the season and the number of reported failures?<br>
+          10. Relationship between Shared Bicycle Model and Failure Rate<br> 
+          11. What is the relationship between the location of the bike stop and the usage rate of people?<br>
+          12. Where should a bike stop be installed so that people can use it a lot?<br>
+          </p>
+        </div>
+      </section>
+      <!-- DataPrep/EDA -->
+      <section id="about" class="section max-container left-align">
+        <img
+          src="images/DataPrep/SeoulBike.jpeg"
+          alt="data-prep"
+          class="about__img">
+        <h2 class="title">Data Collection</h2>
+        <p class="home__description">
+          The raw dataset, named 'hourly_weather_data.csv', was acquired via <u>the Weather History Data API</u> provided by
+          https://open-meteo.com/. It comprises 187,648 rows and 15 columns, spanning weather observations from January 1, 2010,
+          to December 31, 2019. The Python script used to fetch the .csv file from the API can be found on GitHub alongside other
+          pertinent information. The dataset includes fields such as 'date', 'temperature_2m', 'relative_humidity_2m',
+          'dew_point_2m', 'apparent_temperature', 'precipitation', 'rain', 'snowfall', 'snow_depth', 'pressure_msl',
+          'surface_pressure', 'cloud_cover', 'et0_fao_evapotranspiration', 'vapour_pressure_deficit', and 'wind_speed_10m'. Null
+          data were not in the dataset.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/raw_weather_api_1.png" alt="Your Image">
+        </div>
+        
+        <p class="home__description">
+          The 'Seoul Bicycle Sharing' dataset was initially intended to be sourced from https://data.seoul.go.kr/. However, due to
+          the Lunar New Year holiday season in East Asia, the servers hosting the bike dataset were temporarily suspended.
+          Consequently, an alternative dataset from https://www.kaggle.com/datasets/joebeachcapital/seoul-bike-sharing/data was
+          utilized. This dataset includes various fields such as 'date', 'temperature_2m', 'relative_humidity_2m', 'dew_point_2m',
+          'apparent_temperature', 'precipitation', 'rain', 'snowfall', 'snow_depth', 'pressure_msl', 'surface_pressure',
+          'cloud_cover', 'et0_fao_evapotranspiration', 'vapour_pressure_deficit', and 'wind_speed_10m'. Null data were not in the
+          dataset.
+        </p>
+        <div class="center">
+          <img src="images/DataPrep/SeoulDataSet.png" alt="Your Image">
+        </div>
+
+        <h2 class="title">Data Cleaning</h2>
+        <p class="home__description">
+          1. Encoding if necessary<br>First, 'SeoulBikeData.CSV file was not UTF-8 encoded, which caused issues when trying to read or manipulate it,
+          especially if it contains non-ASCII characters. The encoding process needed for merging with hourly_weather_data.csv
+          file. This code essentially filters and truncates the original bike data to include only the specified columns and the
+          first 8736 rows, then saves this filtered data to a new CSV file for further analysis or processing.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/encoding.png" alt="Your Image">
+        </div>
+        </div>
+        <p class="home__description">
+          2. Remove unnecessary decimal points from data<br>Unnecessary decimal points that only add to the complexity of calculations were rounded off and removed.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/decimal.png" alt="Your Image">
+        </div>
+
+        <p class="home__description">
+          3. Remove unnecessary rows from datasets <br>Data values for dates that do not require comparison, other than between December 1, 2017, and November 29, 2018, were
+          excluded. These dates represent overlapping periods in both datasets. It is possible to merge the two CSV files by
+          reducing the number of rows from 87,648 to 8,736 in the 'hourly_weather_data.csv' dataset.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/row.png" alt="Your Image">
+        </div>
+
+        <p class="home__description">
+          4. Remove redundant or unnecessary columns and merge<br>Unnecessary decimal points that only add to the complexity of
+          calculations were rounded off and removed.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/merge.png" alt="Your Image">
+        </div>
+
+        <p class="home__description">
+          5. identify if there are duplicates<br>Since there may be multiple records for a single day, albeit for different hours, there are no redundant entries present
+          in the dataset.
+        </p><br>
+        <div class="center">
+          <img src="images/DataPrep/dupli.png" alt="Your Image">
+        </div>
+
+      </section>
+      <!-- Linear Regression Model Section -->
+      <section id="skills" class="section">
+        <h2>Linear Regression Model</h2>
+
+        <!-- Overview -->
+        <div id="Overview" class="section max-container left-align">
+          <h2>Overview</h2><br>
+          <p class="home__description">
+            The Linear Regression Model Section for your dataset involves applying a statistical technique to analyze the
+            relationship between one or more independent variables and a dependent variable. In this context, the linear
+            regression model can be used to understand how changes in the independent variables, such as temperature, humidity, etc., affect the
+            dependent variable, such as bike usage. The process typically includes data preprocessing, model training, evaluation,
+            and interpretation of the model coefficients to understand the impact of each independent variable on the dependent
+            variable.
+          </p><br>
+        </div>
+
+        <!-- User Research -->
+        <div id="Data" class="section max-container left-align">
+          <h2>User Research</h2><br>
+          <p class="home__description">
+            This research provides a comprehensive overview of Seoul Bike users and their usage behavior. It covers various aspects
+            such as user demographics, trip characteristics, and satisfaction levels. The findings of this study can help improve
+            the Seoul Bike system and better serve its users.
+          </p><br>
+          <div class="center">
+            <img src="images/Linear/stack_chart.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            1. Monthly subscriber comparison by age<br>
+            Surprisingly, the proportion of teenagers was not very high. The highest proportion of participants/users/subscribers
+            was in their 20s, followed by those in their 30s, 40s, 50s, 60s, and 70s.          </p><br>
+          <div class="center">
+            <img src="images/Linear/Line_chart.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            2. Monthly subscriber Growth Rate Over Time<br>
+        Subscriber numbers peaked in March, coinciding with the start of spring. They experienced a steady decline through July,
+        followed by an increase in August. A sharp subscriber drop is evident from November, the onset of winter.          </p><br>
+          <div class="center">
+            <img src="images/Linear/Pie_Chart.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            3. Male/female ratio of users<br>
+            The gender distribution was nearly equal, with 50.4% men and 49.6% women.          </p><br>
+          <div class="center">
+            <img src="images/Linear/scatter plot.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            4. Travel Distance and Number of rentals<br>
+            A positive correlation was found between frequent use and increased amount of movement, despite some outliers.          </p><br>
+          <div class="center">
+            <img src="images/Linear/box_plot.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            5. Hours of use by age<br>
+            Generally, younger users (excluding teenagers) tended to use the bikes for longer periods, although there were a number
+            of outliers.         
+            </p><br>
+
+        <!-- Data -->
+        <div id="Data" class="section max-container left-align">
+          <h2>Data preprocessing/visualization</h2><br>
+          <p class="home__description">
+            Time: The bicycle rental count was investigated based on temporal reference points such as the year, week, and time of
+            day. Additionally, the number of bike rentals during weekday and weekend hours was compared.
+          </p><br>
+          <div class="center">
+            <img src="images/Linear/Year.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            1. At what time of the year do people use Seoul Bicycle Sharing the least?<br>The number of bicycle rentals directly affects revenue. Understanding when the highest and lowest revenue occurs
+            throughout the year is crucial for business management. In Seoul, the period between December and February, the coldest
+            months, sees the fewest bicycle rentals. Following this, during August, the hottest month in Seoul, rental numbers are
+            also low. From this graph, it can be inferred that temperature significantly influences bicycle rental volume.
+          </p><br>
+
+        <div class="center">
+          <img src="images/Linear/Week.png" alt="Your Image"><br>
+        </div>
+          <p class="home__description">
+            2. What day of the week do people use Seoul Bicycle Sharing the least?<br>There was no significant difference in rental volume between weekends and weekdays. From this graph, it can be inferred
+            that shared bikes in Seoul are utilized as an essential means of transportation by users every day.
+          </p><br>
+
+        <div class="center">
+          <img src="images/Linear/dayhour.png" alt="Your Image"><br>
+        </div>
+        <p class="home__description">
+          3. At what time of day do people use Seoul Bicycle Sharing the most?<br>Usage is high during commuting hours. Additionally, there is a tendency for usage to increase in the evening when
+          temperatures drop.
+        </p><br>
+
+        <div class="center">
+          <img src="images/Linear/compareWeekend.png" alt="Your Image"><br>
+        </div>
+        <p class="home__description">
+          4. What is the difference in hourly usage between weekdays and weekends?<br>On weekends, there isn't a sudden increase in usage compared to weekdays. Additionally, usage is evenly distributed
+          overall.
+        </p><br>
+
+        <div class="center">
+          <img src="images/Linear/temp1.png" alt="Your Image"><br>
+        </div>
+        <p class="home__description">
+          5. What weather factors influence people to use Seoul Bicycle Sharing? (temperature)<br>The inference suggests that temperature notably impacts the volume of bicycle rentals, with people opting for Seoul
+          Bicycles particularly when the temperature is moderate. Cold temperatures seem to have a stronger effect on ride counts
+          compared to hot temperatures.
+        </p><br>
+ 
+
+        <div class="center">
+          <img src="images/Linear/temp2.png" alt="Your Image"><br>
+        </div>
+        <div class="center">
+          <img src="images/Linear/humid.png" alt="Your Image"><br>
+        </div><br>
+        <p class="home__description">
+          6. What weather factors influence people to use Seoul Bicycle Sharing? (humidity)<br>Despite the tendency for people to avoid physical activity when humidity levels rise due to an increase in discomfort,
+          it can be observed that bicycle usage actually increases with higher humidity. Further investigation is needed to
+          determine if this correlation holds true in different years.
+        </p><br>
+        <div class="center">
+          <img src="images/Linear/humid2.png" alt="Your Image"><br>
+        </div><br>
+
+        <p class="home__description">
+          7. What weather factors influence people to use Seoul Bicycle Sharing? (precipitation)<br>The graph and value counts reveal a strong correlation between precipitation and bicycle usage. When the precipitation
+          index is 0, bicycle usage is significantly higher.
+        </p><br>
+
+        <div class="center">
+          <img src="images/Linear/preciptation.png" alt="Your Image"><br>
+        </div><br>
+
+
+        <p class="home__description">
+          8. What weather factors influence people to use Seoul Bicycle Sharing? (cloud)
+          On days with no clouds, the bicycle rental rate was high. However, even on cloudy days, the rental rate was relatively
+          higher compared to other times.
+
+        </p><br>
+        
+        <div class="center">
+          <img src="images/Linear/cloud.png" alt="Your Image"><br>
+        </div><br>
+
+        <p class="home__description">
+          9. What weather factors influence people to use Seoul Bicycle Sharing? (precipitation)<br>Temperature and humidity are seen to have a significant influence on people's decision to use bicycles, whereas factors
+          such as air pressure and wind speed appear to be less critical. However, visibility has been identified as an important
+          weather factor for bicycle rentals.
+        </p><br>
+        
+        <div class="center">
+          <img src="images/Linear/windspeed.png" alt="Your Image"><br>
+        </div><br>
+        <p class="home__description">
+          10. Which weather condition shows the strongest correlation with bike rental count?<br>The graph and value counts
+          reveal a strong correlation between precipitation and bicycle usage. When the precipitation
+          index is 0, bicycle usage is significantly higher.
+        </p><br>
+        
+        <div class="center">
+          <img src="images/Linear/correlation.png" alt="Your Image"><br>
+        </div><br>
+
+
+
+          <div class="center">
+            <p>Links to the data:</p>
+            <ul>
+              <li><a href="https://open-meteo.com/en/docs/historical-weather-api">Raw Weather Data</a></li>
+              <li><a href="https://data.seoul.go.kr/dataList/5/literacyView.do">Raw Seoul Bike Data</a></li>
+            </ul>
+        </div>
+
+        <!-- Code -->
+        <div id="Code" class="section max-container left-align">
+          <h2>Code</h2>
+          <p class="home__description">
+            The code related to the linear regression model/method is written in Python and utilizes core packages such as pandas,
+            NumPy, and scikit-learn.oading the dataset: Using pandas to read the dataset from a file (e.g., CSV) into a DataFrame.
+            Preprocessing the data: Handling missing values, encoding categorical variables, and splitting the data into training
+            and testing sets.
+            Creating and training the model: Using scikit-learn to instantiate a linear regression model and fit it to the training
+            data.
+            Evaluating the model: Assessing the model's performance on the testing data, typically using metrics like mean squared
+            error or R-squared.
+            Predicting outcomes: Utilizing the trained model to make predictions on new or unseen data.
+          </p>
+        </div>
+
+        <!-- Results -->
+        <div id="Results" class="section max-container left-align">
+          <h2>Results</h2>
+          <p class="home__description">
+            In a linear regression model, variables like temperature and humidity can be used as independent variables that are
+            related to the dependent variable (bike rental counts). These variables are associated with weather conditions and can
+            potentially influence bike rental demand. using such weather variables as independent variables in the model can help predict bike rental counts. However,
+            depending on the dataset, other independent variables may also be useful, and selecting the appropriate variables based
+            on the analysis goals and domain is crucial.
+          </p>
+        </div>
+      </section>
+
+
+      <!-- Clustering tab-->
+      <section id="clustering" class="section">
+        <h2>The Clustering</h2>
+      
+        <!--Clustering_Overview -->
+        <div id="clustering_overview" class="section max-container left-align">
+          <h2>Overview</h2><br>
+          <div class="center">
+            <img src="images/clustering/clustering_euclidean.png" alt="Your Image"><br>
+          </div><br>
+          <p class="home__description">
+            Clustering is a machine learning technique that organizes unlabeled data into meaningful groups based on similarity.
+            Distance metrics, such as Euclidean, Manhattan, and Cosine, quantify this similarity. There are two main types of
+            clustering: partitional and hierarchical.
+            In partitional clustering, data is divided into non-overlapping clusters, with each point assigned to a single cluster.
+            Popular algorithms include K-means and K-medoids. On the other hand, hierarchical clustering builds a nested tree
+            structure to represent data relationships, with agglomerative and divisive methods used to merge or split clusters.
+            Partitional clustering is better for predefined cluster counts and scalability, while hierarchical clustering is
+            preferred for exploring relationships and insights.
+            This study employs k-means clustering with Euclidean distance as the primary distance metric. Euclidean distance, the
+            default choice in k-means clustering, measures the straight-line distance between two points in multidimensional space.
+            Its formula considers the squared differences of coordinates between points, offering an intuitive, computationally
+            efficient, and effective measure for clustering various datasets.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/cosineDistance.png" alt="Your Image"><br>
+          </div><br>
+          <p class="home__description">
+            The significance of strategically locating shared bike docking stations cannot be overstated. Firstly, it enhances
+            accessibility and convenience for users, ensuring that bikes are readily available where needed and have adequate space
+            for return, thereby fostering increased ridership and solidifying the program as a viable transportation alternative.
+            Secondly, such placement plays a pivotal role in demand management, as stations must cater to popular starting and
+            ending points of trips, particularly in bustling areas like transit hubs and business districts. Moreover, equitable
+            distribution across various neighborhoods is essential to promote inclusivity and offer all residents access to this
+            eco-friendly mode of transport while also considering its impact on traffic flow and integration with existing transport
+            networks.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/dockingStation_appImage.png" alt="Your Image"><br>
+          </div><br>
+          <p class="home__description">
+            Analyzing data is imperative for optimizing the efficiency and effectiveness of bike share systems. By discerning usage
+            patterns, identifying bottlenecks, and strategically planning station expansion based on demand, cities and operators
+            can ensure better accessibility, equity, and performance tracking. This data-driven approach not only improves the
+            overall user experience but also enables informed decision-making for the continued growth and success of the bike share
+            program.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/OverallData.png" alt="Your Image"><br>
+          </div><br>
+          <p class="home__description">
+            This study focuses on the process of Identifying Station Profiles within a bike share system. It entails categorizing
+            stations based on their utilization patterns and detecting imbalances in bike availability. By clustering stations
+            according to the volume of bikes picked up and dropped off across different times of the week, specific usage trends
+            emerge, such as heightened activity at commuter stations during rush hours, increased usage at leisure-focused stations
+            on weekends, and fluctuations related to special events. Furthermore, grouping stations based on their frequency of
+            being either empty or full reveals areas requiring frequent bike redistribution, offering insights into potential
+            improvements in system logistics.<br>
+            The Discovery Process outlined in this study comprises essential steps for analyzing bike share system dynamics.
+            Initially, it involves preparing the data by cleaning and formatting station-level and trip data and potentially
+            deriving additional features like bike turnover rates or trip frequencies between stations. Subsequently, selecting
+            relevant features such as pickup/drop-off times and station occupancy levels helps in refining the analysis.
+            Experimentation with various clustering algorithms enables the exploration of station patterns, followed by assessing
+            the quality of these clusters to aid interpretation through visualization. The generation of insights involves
+            identifying meaningful patterns within clusters and translating them into actionable recommendations for enhancing
+            system usage, understanding user behavior, and addressing areas of improvement. Additionally, the study emphasizes
+            considering the temporal dimension, acknowledging how patterns evolve over different time periods, and recognizing
+            external factors like events or weather that may impact usage patterns.
+          </p><br>
+        </div>      
+      
+        <!--Clustering_Data -->
+        <div id="clustering_data" class="section max-container left-align">
+          <h2>Data Preprocessing</h2><br>
+          <p class="home__description">
+            The study's temporal scope was confined to 2017, preceding the enforcement of social distancing and quarantine measures
+            prompted by the COVID-19 pandemic. This timeframe was chosen to ensure a robust sample size for analysis and to mitigate
+            any potential impact from infectious diseases. Specifically, the study focused on May, the onset of early summer, a
+            period characterized by a notable uptick in new shared bicycle memberships attributed to favorable weather conditions
+            and temperature, which in turn facilitated increased bicycle traffic.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/Data_BeforeTranslated.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            The data pertaining to shared bicycle stops used in this study was originally documented in Korean and included
+            extraneous columns such as 'Saved Carbon Emission'. To streamline the dataset, our initial step involved translating all
+            columns into English and subsequently eliminating non-numerical columns deemed superfluous.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/dataInfo_DropCheck.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Data check was conducted for any missing values within the dataset to ensure the integrity of our analysis. Fortunately,
+            there were no instances of missing values across any columns. Furthermore, I transformed the 'Docking Station Number'
+            column into numerical values using LabelEncoder. This transformation aids in grouping the DataFrame by 'Docking Station
+            Number' and facilitates the calculation of the sum for each group.
+          </p><br>
+          <div class="center">
+            <img src="images/clustering/data_beforeNormalization.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Lastly,Z-score normalization was conducted on the four chosen features due to the presence of outliers in some stops with
+            exceptionally high values. This normalization technique adjusts the data to have a mean of 0 and a standard deviation of
+            1. While outliers can still influence the mean and standard deviation, their impact is mitigated compared to min-max
+            scaling. Z-scores essentially quantify the distance of a data point from the mean in terms of standard deviations,
+            allowing for the accommodation of outliers without significantly compressing the remainder of the distribution.
+
+          </p><br>
+
+          <div class="center">
+            <img src="images/clustering/data_normalization.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            In this study, the plan is to utilize the normalized data and execute k-means clustering using Python code. The process
+            of K-means with Euclidean Distance entails several key steps. Initially, the number of clusters, denoted as 'k', needs
+            to be determined, a pivotal decision often requiring domain expertise or iterative experimentation. Subsequently, the
+            algorithm randomly selects 'k' data points from the dataset as the initial centroids for the clusters. Following this,
+            for each remaining data point, the algorithm computes the Euclidean distance to each centroid and assigns the point to
+            the cluster with the closest centroid. Upon completing assignments, the algorithm updates centroids by computing the
+            mean of all data points within each cluster, adjusting centroid positions accordingly. This iterative process continues,
+            potentially leading to changes in cluster membership as centroids shift, until convergence is achieved. Convergence is
+            indicated when centroids no longer substantially move or a predetermined maximum number of iterations is reached,
+            signifying stability in the clustering. The Euclidean Distance, utilized as the distance measure, represents the
+            "straight-line" distance between two points in space and is favored for its intuitive nature, computational efficiency,
+            and compatibility with the spherical cluster assumption inherent in K-means clustering.
+            Also, In this study, the objective is to utilize the normalized data and conduct hierarchical clustering using the
+            Cosine Similarity method through R code. The process of hierarchical clustering entails iteratively identifying the most
+            similar pairs of clusters based on cosine similarity and merging them into new clusters. This iterative procedure
+            results in the construction of a hierarchical cluster structure, visualized as a dendrogram. The utilization of Cosine
+            Similarity with hclust is advantageous in scenarios where the relative proportions or patterns of features hold more
+            significance than their absolute magnitudes. Additionally, if vectors are already normalized (with a magnitude of 1),
+            cosine similarity simplifies to cosine distance (1 - cosine similarity), making it directly applicable for clustering
+            purposes. This metric is particularly effective when the objective is to cluster data points based on the similarity of
+            their overall shapes rather than their magnitudes.
+      
+          </p><br>
+          <h2>LINK to the Sample of Data</h2><br>
+          <p class="home__description">This is the <a
+              href="https://data.seoul.go.kr/dataList/OA-15248/F/1/datasetView.do#">link</a> to Seoul Metropolitan
+            Government Shared Bicycle Data Center website.</p>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%B5%EA%B3%B5%EC%9E%90%EC%A0%84%EA%B1%B0%20%EC%8B%A0%EA%B7%9C%EA%B0%80%EC%9E%85%EC%9E%90%20%EC%A0%95%EB%B3%B4(%EC%9B%94%EB%B3%84)_23.1-6.csv">link</a>
+            to the GitHub where that data is stored.</p>
+
+        </div>
+    
+
+        <!--Clustering_Code -->
+        <div id="clustering_code" class="section max-container left-align">
+          <h2>Code</h2>
+          <p class="home__description">This is the Python code k-means clustering <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/clustering.ipynb">link</a> to the
+            GitHub where
+            that data is stored.</p>
+          <p class="home__description">This is the R code hierarchical clustering <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/Dendrogram_hclustering.R">link</a> to the GitHub where
+            that data is stored.</p>
+        </div>
+
+  
+        <!--Clustering_Results -->
+        <div id="clustering_results" class="section max-container left-align">
+          <h2>Results</h2>
+          <div class="center">
+            <img src="images/clustering/silhouetteMethod.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            The silhouette method assesses the quality of clustering solutions by examining silhouette scores, with higher scores
+            indicating better clustering. When plotting silhouette scores against the number of clusters (k), the optimal number of
+            clusters, or the "best k," is typically identified as the value of k corresponding to the highest average silhouette
+            score. This value signifies the number of clusters that maximizes the cohesion within clusters while maximizing the
+            separation between them, providing the most meaningful and distinct grouping of data points.
+            Based on the silhouette scores obtained from your code, the silhouette method suggests that the optimal number of
+            clusters, or the "best k" value, is 5. This is evident as the silhouette score corresponding to k=5 (0.768) is the
+            highest among all the values tested. This indicates that the data points are well-clustered and exhibit a good
+            separation from neighboring clusters when divided into four distinct groups.
+          </p>
+          <div class="center">
+            <img src="images/clustering/4_k-mean_clustering.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Based on the silhouette scores obtained from our clustering analysis, which focused on the number of uses and time of
+            use, the two most crucial features for bike dock operation, we identified four distinct clusters. These clusters were
+            derived from running the clustering algorithm for k values ranging from 2 to 5. Notably, the silhouette scores for these
+            cases were relatively high, indicating robust clustering and meaningful separation of data points within each cluster.
+          </p>
+          <div class="center">
+            <img src="images/clustering/Dendrogram.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            In interpreting dendrograms, it's vital to understand that the lengths of vertical branches represent dissimilarity
+            between clusters; longer branches imply greater dissimilarity. Identifying significant changes, resembling an elbow in a
+            chart, where vertical line lengths sharply increase, indicates natural points for "cutting" the tree to obtain distinct
+            clusters. This elbow-like pattern assists in estimating the optimal number of clusters, achieving a balance between
+            meaningful distinction and manageable complexity, although it's not infallible. Therefore, the dendrogram suggests that
+            the best value of k is 5.
+          </p>
+
+        </div>
+
+        <!--Clustering_conclusion -->
+        <div id="clustering_conclusion" class="section max-container left-align">
+          <h2>Clustering Conclusion</h2>
+          <div class="center">
+            <img src="images/clustering/dend_cluster_assignment.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Based on the silhouette scores obtained from your code, which suggest that the optimal number of clusters, or the "best
+            k" value, is 5, and the dendrogram, which also indicates that the best value of k is 5, it can be inferred that bike
+            stops can be effectively categorized by these five criteria. These criteria are as follows: Cluster 1 represents
+            high-traffic downtown stations, Cluster 2 denotes busy suburban hubs, Cluster 3 encompasses park and recreation area
+            stations, Cluster 4 comprises residential neighborhood stations, and Cluster 5 identifies tiny outliers requiring
+            further research. This categorization provides a comprehensive framework for understanding and managing bike stop
+            locations based on their distinct characteristics and usage patterns.
+          </p>
+        </div>
+      </section>
+  
+      <!-- PCA tab -->
+      <section id="PCA" class="section">
+        <h2>The PCA</h2>
+      
+        <!--PCA_Overview -->
+        <div id="PCA_overview" class="section max-container left-align">
+          <h2>Overview</h2><br>
+          <div class="center">
+            <img src="images/PCA/Eigenvalue.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Eigenvalues and eigenvectors are fundamental mathematical concepts that play a crucial role in Principal Component
+            Analysis (PCA), a technique used for dimensionality reduction. Eigenvectors represent new directions or axes in a
+            high-dimensional dataset, with each eigenvector capturing the direction of greatest variance in the data. Eigenvalues,
+            corresponding to each eigenvector, quantify the amount of variance along that direction, with larger eigenvalues
+            indicating more significant variability. In PCA, the goal is to find eigenvectors with the largest eigenvalues, as these
+            represent the most informative directions in the data. By projecting the data onto these principal components, PCA
+            retains essential data characteristics while reducing dimensionality. An analogy likens eigenvectors to lines that best
+            fit through the elongated parts of a cloud of data points, with eigenvalues indicating the extent of elongation. In
+            essence, eigenvalues and eigenvectors enable PCA to identify the most informative data directions, facilitating
+            effective dimensionality reduction while preserving crucial data insights.
+          </p><br>
+          <div>
+            <img src="images/PCA/dimensionality_reduction.jpeg" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Dimensionality reduction is the process of transforming high-dimensional data into a lower-dimensional representation
+            while retaining important information. It simplifies analysis and visualization by summarizing datasets with many
+            features into fewer dimensions, preserving essential patterns. This process is crucial for overcoming the curse of
+            dimensionality, where high-dimensional spaces become sparse and challenging for machine learning models to interpret
+            effectively. By reducing dimensions, computational efficiency is improved, making data processing faster and more
+            manageable, particularly for large datasets. Moreover, lower-dimensional data enables improved visualization, allowing
+            for the identification of clusters, trends, and outliers. Additionally, dimensionality reduction helps to eliminate
+            noise and redundancies within the data, leading to cleaner datasets. An example illustrates how a dataset with numerous
+            customer features can be compressed into a smaller set of informative features, enhancing both computational efficiency
+            and visualization capabilities.
+          </p><br>
+          <div class="center">
+            <img src="images/PCA/curseDimensionality.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            High-dimensional data, characterized by a plethora of features or variables, poses numerous challenges that necessitate
+            the use of dimensionality reduction techniques for mitigation. These challenges include the curse of dimensionality,
+            where sparsity, distorted distances, and overfitting hinder pattern recognition and model generalization. Additionally,
+            computational complexity escalates significantly with high-dimensional data, impeding efficient algorithmic processing.
+            Noise and redundancy further obscure data patterns, while the inability to directly visualize data beyond three
+            dimensions limits insights. Dimensionality reduction addresses these challenges by streamlining feature sets, making
+            distances more interpretable, and enhancing algorithmic performance through noise reduction. It also accelerates
+            computations, facilitates visualization in lower dimensions, and compresses data for storage efficiency.
+          </p><br>
+
+        </div>
+      
+        <!--PCA_Data -->
+        <div id="PCA_data" class="section max-container left-align">
+          <h2>Data Preprocessing</h2><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_before.png" alt="Your Image"><br>
+              <figcaption>Data Frames Before</figcaption>
+          </div>
+          <p class="home__description">
+            The study focused on data from 2017, before the COVID-19 pandemic, particularly in May, a period of increased shared
+            bicycle usage due to favorable weather. The data, initially in Korean, underwent translation and cleanup, including the
+            removal of unnecessary columns. Checks for missing values were conducted, and numerical encoding was applied to the
+            'Docking Station Number' column. Z-score normalization was performed on selected features to handle outliers effectively
+            while maintaining data integrity. This process ensured robust analysis and prepared the dataset for further
+            investigation.
+          </p><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_after.png" alt="Your Image"><br>
+              <figcaption>Data Frames After Transforming</figcaption>
+          </div>
+          <p class="home__description">
+            PCA (Principal Component Analysis) operates optimally under specific data conditions, necessitating numerical data where
+            each feature contains numeric values such as heights, weights, or income levels. Continuous variables are preferred as
+            PCA aims to capture variance effectively, making it less suitable for discrete variables unless appropriately encoded
+            numerically. Additionally, PCA is sensitive to feature scale discrepancies, requiring data standardization or
+            normalization to ensure equal feature contributions. Furthermore, PCA assumes linear relationships between features,
+            potentially limiting its effectiveness if strong non-linear relationships exist. In conclusion, for optimal PCA
+            outcomes, data should be numeric, predominantly continuous, scaled, and exhibit linear relationships among features. The
+            high correlation values above 0.77 between 'Number of uses', 'Exercise Amount', 'Moving distance (meters)', and 'Time of
+            use (minutes)' indicate strong associations, rendering these selected features suitable for applying PCA.
+          </p><br>
+          <div class="center">
+            <img src="images/PCA/correlation_matrix.png" alt="Your Image"><br>
+          </div>
+          <h2>LINK to the Sample of Data</h2><br>
+          <p class="home__description">This is the <a
+              href="https://data.seoul.go.kr/dataList/OA-15248/F/1/datasetView.do#">link</a> to Seoul Metropolitan
+            Government Shared Bicycle Data Center website.</p>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%B5%EA%B3%B5%EC%9E%90%EC%A0%84%EA%B1%B0%20%EC%8B%A0%EA%B7%9C%EA%B0%80%EC%9E%85%EC%9E%90%20%EC%A0%95%EB%B3%B4(%EC%9B%94%EB%B3%84)_23.1-6.csv">link</a>
+            to the GitHub where that data is stored.</p>
+
+
+        </div>
+
+
+        <!--PCA_Code -->
+        <div id="PCA_code" class="section max-container left-align">
+          <h2>Code</h2>
+            <p class="home__description">This is the <a href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/PCA.ipynb">link</a> to the GitHub where that data is stored.</p>
+        </div>
+      
+        <!--PCA_Results -->
+        <div id="PCA_results" class="section max-container left-align">
+          <h2>Results</h2>
+          <div class="center">
+            <img src="images/PCA/PCA_clustering.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            PC scores represent the coordinates of each data point within the new coordinate system defined by the principal
+            components. Each data point possesses a score for every principal component retained in the analysis.
+            The blue, red, and orange clusters exhibit significant overlap, with their numerical differences falling within the
+            range of -1 to 1. These clusters are notably dominant, forming tightly clustered groups within the plot. In contrast,
+            the purple and green clusters appear more dispersed, with fewer data points. However, despite their lower numbers, these
+            stops attract considerable user activity, suggesting that they are busy locations. Therefore, it's essential to delve
+            into the factors contributing to their activity despite their lower numerical representation.
+            Scatter plots of data points along PC1 and PC2 are effective tools for identifying patterns, clusters, or trends within
+            the data. These visualizations reveal the potential for clustering, as distinct groupings in the reduced PC space
+            suggest that the data may naturally exhibit clusters. The presence of such discernible groupings provides justification
+            for employing five clusters in the clustering analysis, indicating that the data can be meaningfully segmented into
+            distinct categories based on its inherent structure.
+
+          </p>
+
+          <div class="center">
+            <img src="images/PCA/Biplot.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            A biplot combines two essential components of PCA analysis into a single graphical representation. The score plot
+            illustrates the locations of individual data samples projected onto the new principal components, typically PC1 and PC2,
+            akin to a standard scatter plot with the axes representing the newly calculated PCs. Concurrently, the loading plot
+            represents original variables as vectors, indicating both the direction and strength of each variable's contribution to
+            the principal components. Through biplots, relationships within the data are unveiled: data points reveal similarities
+            or differences along the reduced dimensions of the principal components, potentially indicating clusters or patterns
+            within the data. Additionally, variables represented by loading vectors illustrate their relationships with the
+            principal components: similar directions denote positive correlations, while opposite directions indicate negative
+            correlations. The length of the vectors signifies the strength of the variables' influence on the principal components,
+            while the angle with an axis indicates the degree of correlation. By projecting data points perpendicularly onto
+            variable vectors, biplots assist in identifying variables that characterize specific clusters or regions within the
+            plot.
+            PC1 and PC2 exhibit an angle of nearly 90 degrees, indicating a lack of significant correlation. The length of each
+            vector illustrates the strength of a variable's influence on a principal component, with longer vectors representing
+            stronger associations. Notably, PC2 demonstrates a stronger association than PC1.
+
+          </p>
+    
+        </div>
+        <!--PCA_conclusion -->
+        <div id="PCA_conclusion" class="section max-container left-align">
+          <h2>PCA Conclusion</h2>
+          <p class="home__description">
+            From the discussion on PC scores, I've gained an understanding that they act as coordinates for data points within the
+            new coordinate system established by the principal components. Moreover, each data point possesses scores for every
+            principal component retained in the analysis, offering valuable insights into how PCA transforms and represents data in
+            a lower-dimensional space.
+
+            In analyzing clusters on the scatter plot along PC1 and PC2, I've observed that certain clusters, such as the blue, red,
+            and orange clusters, exhibit significant overlap and dominance within the plot. Conversely, clusters like purple and
+            green appear more dispersed, despite attracting considerable user activity. This observation underscores the importance
+            of exploring the factors influencing activity levels in these clusters, despite their lower numerical representation.
+
+            Additionally, the discussion on biplots has shed light on how relationships within the data can be revealed through
+            graphical representations combining score plots and loading plots. Understanding the interpretation of biplots,
+            including the direction, strength, and influence of variables, enhances comprehension of the relationships between
+            variables and principal components.
+
+            Overall, it appears that we can enhance the analysis of each bike stop cluster's characteristics by categorizing them
+            into two main groups, and then further subdividing the groups based on their autonomy from the total usage. This
+            approach could provide deeper insights into the distinct characteristics and usage patterns of different clusters.
+
+          </p>
+        </div>
+      </section>
+
+      <!-- Naïve_Bayes tab -->
+      <section id="Naïve_Bayes" class="section">
+        <h2>The Naïve Bayes</h2>
+      
+        <!--Naïve_Bayes_Overview -->
+        <div id="Naïve_Bayes_overview" class="section max-container left-align">
+          <h2>Overview</h2><br>
+          <div class="center">
+            <img src="images/PCA/Eigenvalue.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Eigenvalues and eigenvectors are fundamental mathematical concepts that play a crucial role in Principal Component
+            Analysis (PCA), a technique used for dimensionality reduction. Eigenvectors represent new directions or axes in a
+            high-dimensional dataset, with each eigenvector capturing the direction of greatest variance in the data.
+            Eigenvalues,
+            corresponding to each eigenvector, quantify the amount of variance along that direction, with larger eigenvalues
+            indicating more significant variability. In PCA, the goal is to find eigenvectors with the largest eigenvalues, as
+            these
+            represent the most informative directions in the data. By projecting the data onto these principal components, PCA
+            retains essential data characteristics while reducing dimensionality. An analogy likens eigenvectors to lines that
+            best
+            fit through the elongated parts of a cloud of data points, with eigenvalues indicating the extent of elongation.
+            In
+            essence, eigenvalues and eigenvectors enable PCA to identify the most informative data directions, facilitating
+            effective dimensionality reduction while preserving crucial data insights.
+          </p><br>
+          
+      
+        </div>
+      
+        <!--Naïve_Bayes_Data -->
+        <div id="Naïve_Bayes_data" class="section max-container left-align">
+          <h2>Data Preprocessing</h2><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_before.png" alt="Your Image"><br>
+            <figcaption>Data Frames Before</figcaption>
+          </div>
+          <p class="home__description">
+            The study focused on data from 2017, before the COVID-19 pandemic, particularly in May, a period of increased
+            shared
+            bicycle usage due to favorable weather. The data, initially in Korean, underwent translation and cleanup,
+            including the
+            removal of unnecessary columns. Checks for missing values were conducted, and numerical encoding was applied to
+            the
+            'Docking Station Number' column. Z-score normalization was performed on selected features to handle outliers
+            effectively
+            while maintaining data integrity. This process ensured robust analysis and prepared the dataset for further
+            investigation.
+          </p><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_after.png" alt="Your Image"><br>
+            <figcaption>Data Frames After Transforming</figcaption>
+          </div>
+
+          <h2>LINK to the Sample of Data</h2><br>
+          <p class="home__description">This is the <a
+              href="https://data.seoul.go.kr/dataList/OA-15248/F/1/datasetView.do#">link</a> to Seoul Metropolitan
+            Government Shared Bicycle Data Center website.</p>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%B5%EA%B3%B5%EC%9E%90%EC%A0%84%EA%B1%B0%20%EC%8B%A0%EA%B7%9C%EA%B0%80%EC%9E%85%EC%9E%90%20%EC%A0%95%EB%B3%B4(%EC%9B%94%EB%B3%84)_23.1-6.csv">link</a>
+            to the GitHub where that data is stored.</p>
+      
+      
+        </div>
+      
+      
+        <!--Naïve_Bayes_Code -->
+        <div id="Naïve_Bayes_code" class="section max-container left-align">
+          <h2>Code</h2>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/PCA.ipynb">link</a> to the GitHub
+            where that data is stored.</p>
+        </div>
+      
+        <!--Naïve_Bayes_Results -->
+        <div id="Naïve_Bayes_results" class="section max-container left-align">
+          <h2>Results</h2>
+          <div class="center">
+            <img src="images/PCA/PCA_clustering.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            PC scores represent the coordinates of each data point within the new coordinate system defined by the principal
+            components. Each data point possesses a score for every principal component retained in the analysis.
+            The blue, red, and orange clusters exhibit significant overlap, with their numerical differences falling within
+            the
+            range of -1 to 1. These clusters are notably dominant, forming tightly clustered groups within the plot. In
+            contrast,
+            the purple and green clusters appear more dispersed, with fewer data points. However, despite their lower numbers,
+            these
+            stops attract considerable user activity, suggesting that they are busy locations. Therefore, it's essential to
+            delve
+            into the factors contributing to their activity despite their lower numerical representation.
+            Scatter plots of data points along PC1 and PC2 are effective tools for identifying patterns, clusters, or trends
+            within
+            the data. These visualizations reveal the potential for clustering, as distinct groupings in the reduced PC space
+            suggest that the data may naturally exhibit clusters. The presence of such discernible groupings provides
+            justification
+            for employing five clusters in the clustering analysis, indicating that the data can be meaningfully segmented
+            into
+            distinct categories based on its inherent structure.
+      
+          </p>
+      
+        </div>
+        <!--Naïve_Bayes_conclusion -->
+        <div id="Naïve_Bayes_conclusion" class="section max-container left-align">
+          <h2>Naïve Bayes Conclusion</h2>
+          <p class="home__description">
+            From the discussion on PC scores, I've gained an understanding that they act as coordinates for data points within
+            the
+            new coordinate system established by the principal components. Moreover, each data point possesses scores for
+            every
+            principal component retained in the analysis, offering valuable insights into how PCA transforms and represents
+            data in
+            a lower-dimensional space.
+      
+            In analyzing clusters on the scatter plot along PC1 and PC2, I've observed that certain clusters, such as the
+            blue, red,
+            and orange clusters, exhibit significant overlap and dominance within the plot. Conversely, clusters like purple
+            and
+            green appear more dispersed, despite attracting considerable user activity. This observation underscores the
+            importance
+            of exploring the factors influencing activity levels in these clusters, despite their lower numerical
+            representation.
+      
+            Additionally, the discussion on biplots has shed light on how relationships within the data can be revealed
+            through
+            graphical representations combining score plots and loading plots. Understanding the interpretation of biplots,
+            including the direction, strength, and influence of variables, enhances comprehension of the relationships between
+            variables and principal components.
+      
+            Overall, it appears that we can enhance the analysis of each bike stop cluster's characteristics by categorizing
+            them
+            into two main groups, and then further subdividing the groups based on their autonomy from the total usage. This
+            approach could provide deeper insights into the distinct characteristics and usage patterns of different clusters.
+      
+          </p>
+        </div>
+      </section>
+  
+      <!-- Decision_Tree tab -->
+      <section id="Decision_Tree" class="section">
+        <h2>The Decision Tree</h2>
+      
+        <!--Decision_Tree_Overview -->
+        <div id="Decision_Tree_overview" class="section max-container left-align">
+          <h2>Overview</h2><br>
+          <div class="center">
+            <img src="images/PCA/Eigenvalue.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            Eigenvalues and eigenvectors are fundamental mathematical concepts that play a crucial role in Principal Component
+            Analysis (PCA), a technique used for dimensionality reduction. Eigenvectors represent new directions or axes in a
+            high-dimensional dataset, with each eigenvector capturing the direction of greatest variance in the data.
+            Eigenvalues,
+            corresponding to each eigenvector, quantify the amount of variance along that direction, with larger eigenvalues
+            indicating more significant variability. In PCA, the goal is to find eigenvectors with the largest eigenvalues, as
+            these
+            represent the most informative directions in the data. By projecting the data onto these principal components, PCA
+            retains essential data characteristics while reducing dimensionality. An analogy likens eigenvectors to lines that
+            best
+            fit through the elongated parts of a cloud of data points, with eigenvalues indicating the extent of elongation.
+            In
+            essence, eigenvalues and eigenvectors enable PCA to identify the most informative data directions, facilitating
+            effective dimensionality reduction while preserving crucial data insights.
+          </p><br>
+      
+      
+        </div>
+      
+        <!--Decision_Tree_Data -->
+        <div id="Decision_Tree_data" class="section max-container left-align">
+          <h2>Data Preprocessing</h2><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_before.png" alt="Your Image"><br>
+            <figcaption>Data Frames Before</figcaption>
+          </div>
+          <p class="home__description">
+            The study focused on data from 2017, before the COVID-19 pandemic, particularly in May, a period of increased
+            shared
+            bicycle usage due to favorable weather. The data, initially in Korean, underwent translation and cleanup,
+            including the
+            removal of unnecessary columns. Checks for missing values were conducted, and numerical encoding was applied to
+            the
+            'Docking Station Number' column. Z-score normalization was performed on selected features to handle outliers
+            effectively
+            while maintaining data integrity. This process ensured robust analysis and prepared the dataset for further
+            investigation.
+          </p><br>
+          <div class="center">
+            <img src="images/PCA/dataPCA_after.png" alt="Your Image"><br>
+            <figcaption>Data Frames After Transforming</figcaption>
+          </div>
+      
+          <h2>LINK to the Sample of Data</h2><br>
+          <p class="home__description">This is the <a
+              href="https://data.seoul.go.kr/dataList/OA-15248/F/1/datasetView.do#">link</a> to Seoul Metropolitan
+            Government Shared Bicycle Data Center website.</p>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%B5%EA%B3%B5%EC%9E%90%EC%A0%84%EA%B1%B0%20%EC%8B%A0%EA%B7%9C%EA%B0%80%EC%9E%85%EC%9E%90%20%EC%A0%95%EB%B3%B4(%EC%9B%94%EB%B3%84)_23.1-6.csv">link</a>
+            to the GitHub where that data is stored.</p>
+      
+      
+        </div>
+      
+      
+        <!--Decision_Tree_Code -->
+        <div id="Decision_Tree_code" class="section max-container left-align">
+          <h2>Code</h2>
+          <p class="home__description">This is the <a
+              href="https://github.com/ArchiComputer/ML_Assignment2.github.io/blob/main/PCA.ipynb">link</a> to the GitHub
+            where that data is stored.</p>
+        </div>
+      
+        <!--Decision_Tree_Results -->
+        <div id="Decision_Tree_results" class="section max-container left-align">
+          <h2>Results</h2>
+          <div class="center">
+            <img src="images/PCA/PCA_clustering.png" alt="Your Image"><br>
+          </div>
+          <p class="home__description">
+            PC scores represent the coordinates of each data point within the new coordinate system defined by the principal
+            components. Each data point possesses a score for every principal component retained in the analysis.
+            The blue, red, and orange clusters exhibit significant overlap, with their numerical differences falling within
+            the
+            range of -1 to 1. These clusters are notably dominant, forming tightly clustered groups within the plot. In
+            contrast,
+            the purple and green clusters appear more dispersed, with fewer data points. However, despite their lower numbers,
+            these
+            stops attract considerable user activity, suggesting that they are busy locations. Therefore, it's essential to
+            delve
+            into the factors contributing to their activity despite their lower numerical representation.
+            Scatter plots of data points along PC1 and PC2 are effective tools for identifying patterns, clusters, or trends
+            within
+            the data. These visualizations reveal the potential for clustering, as distinct groupings in the reduced PC space
+            suggest that the data may naturally exhibit clusters. The presence of such discernible groupings provides
+            justification
+            for employing five clusters in the clustering analysis, indicating that the data can be meaningfully segmented
+            into
+            distinct categories based on its inherent structure.
+      
+          </p>
+      
+        </div>
+        <!--Decision_Tree_conclusion -->
+        <div id="Decision_Tree_conclusion" class="section max-container left-align">
+          <h2>Naïve Bayes Conclusion</h2>
+          <p class="home__description">
+            From the discussion on PC scores, I've gained an understanding that they act as coordinates for data points within
+            the
+            new coordinate system established by the principal components. Moreover, each data point possesses scores for
+            every
+            principal component retained in the analysis, offering valuable insights into how PCA transforms and represents
+            data in
+            a lower-dimensional space.
+      
+            In analyzing clusters on the scatter plot along PC1 and PC2, I've observed that certain clusters, such as the
+            blue, red,
+            and orange clusters, exhibit significant overlap and dominance within the plot. Conversely, clusters like purple
+            and
+            green appear more dispersed, despite attracting considerable user activity. This observation underscores the
+            importance
+            of exploring the factors influencing activity levels in these clusters, despite their lower numerical
+            representation.
+      
+            Additionally, the discussion on biplots has shed light on how relationships within the data can be revealed
+            through
+            graphical representations combining score plots and loading plots. Understanding the interpretation of biplots,
+            including the direction, strength, and influence of variables, enhances comprehension of the relationships between
+            variables and principal components.
+      
+            Overall, it appears that we can enhance the analysis of each bike stop cluster's characteristics by categorizing
+            them
+            into two main groups, and then further subdividing the groups based on their autonomy from the total usage. This
+            approach could provide deeper insights into the distinct characteristics and usage patterns of different clusters.
+      
+          </p>
+        </div>
+      </section>
+
+
+      <div class="section max-container left-align">
+        <h2 class="title">Conclusion</h2>
+      <section id="testimonial" class="section max-container left-align">
+          Through our analysis of the Seoul Bike sharing dataset alongside weather factors, we've uncovered several significant
+          insights that shed light on the dynamics of bike sharing in Seoul and its relationship with weather conditions.<br>
+
+        
+          Firstly, we observed a clear correlation between weather patterns and bike rental demand. Days with clear skies and mild
+          temperatures tended to see higher bike rental activity, while extreme weather conditions such as heavy rain or strong
+          winds correlated with decreased usage. This finding emphasizes the impact of weather on people's willingness and ability
+          to engage in outdoor activities like biking.</p><br>
+
+          Furthermore, our analysis revealed seasonal variations in bike sharing usage. During the warmer months, demand for bike
+          rentals peaked, aligning with expectations of more favorable weather conditions for outdoor activities. Conversely,
+          colder months saw a decline in usage, suggesting a preference for indoor modes of transportation during inclement
+          weather.</p><br>
+
+          Moreover, we identified specific weather factors that exerted the most influence on bike rental patterns. Variables such
+          as temperature, precipitation, and wind speed emerged as key determinants of rental demand. Understanding the interplay
+          between these weather variables and bike sharing activity is crucial for optimizing bike sharing services and resource
+          allocation based on weather forecasts.</p><br>
+
+
+          Importantly, our analysis highlights the potential for leveraging weather data to enhance bike sharing services in
+          Seoul. By integrating real-time weather information into bike sharing platforms, operators can anticipate fluctuations
+          in demand, optimize bike distribution, and provide users with personalized recommendations based on weather conditions.</p><br>
+
+
+          Lastly, our findings underscore the importance of considering weather factors in urban transportation planning and
+          policy-making. As cities strive to promote sustainable and active modes of transportation like biking, understanding the
+          influence of weather on bike sharing usage is essential for designing resilient and user-centric transportation systems.</p><br>
+
+
+          In conclusion, our analysis demonstrates the significant impact of weather on bike sharing activity in Seoul. By
+          leveraging data insights, stakeholders can make informed decisions to enhance the accessibility, efficiency, and
+          sustainability of bike sharing services, ultimately contributing to a more vibrant and resilient urban environment.</p><br>  
+      </section>
+
+      <!-- Arrow up -->
+      <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
+        </a>
+      </aside>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title">Thank You</h2>
+        <p class="description">juki6356@colorado.edu</p>
+        <ul class="contact__links">
+          <!-- <li>
+            <a
+              class="contact__link"
+              href="https://github.com/dream-ellie"
+              target="_blank"
+              title="my github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/dream-ellie"
+              target="_blank"
+              title="my linkedin link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <p>ⓒDream Coding Ellie - All rights reserved</p> -->
+      </div>
+    </footer>
+  </body>
+</html>
